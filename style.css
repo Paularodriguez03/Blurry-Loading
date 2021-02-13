@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.bg {
+  background-image: url(https://scontent.fbog14-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/122905510_374080510455021_7456290033904130499_n.jpg?_nc_cat=104&ccb=3&_nc_sid=ae9488&_nc_eui2=AeE9qPAz4CFZtV3WBgWFrdcABbE07yIfDr4FsTTvIh8OvtNSMqayjMvbGQjAKkELd9bpm6fJ20ht7ZOgMyBixy3R&_nc_ohc=6dZ926paYv0AX_OT2ca&_nc_ht=scontent.fbog14-1.fna&tp=7&oh=77a168a3d964652b7a5c07e01c4e74c1&oe=604BA40E);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  /*indica el orden de un elemento posicionado y sus descendientes. Cuando varios elementos se 
+  superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+  /*en este caso es para que imagen quede debajo*/
+  filter: blur(100px);
+  /*aplica un desenfoque Gaussiano a la imagen de entrada
+  en este caso el decir le que 100px lo hace suemamnete borroso*/
+}
+
+.bg .active{
+  top: -30px;
+  left: -30px;
+  /*top y left son para posicionar*/
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  /*la propiedad calc permite calcular el tamaño de un objeto en css en este caso a los 100vw o vh
+  se le sueman 60px*//*preguntar el por que esto*/
+  filter: blur(0px);
+  /*cuando el blur este en 0 es que la imagen se ve con claridad*/
+}
+
+.loading-text {
+  font-size: 50px;
+  color: #ffffff;
+} 
+
+
+
